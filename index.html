@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>2023 Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <div class="inner flx">
+        <h1 class="logo">HEE EUN &copy;2023</h1>
+        <nav>
+          <ul class="flx">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="m01" id="home">
+        <div class="inner">
+          <div class="tit">
+            <h2>PORTFOLIO</h2>
+            <div class="tit-cover"></div>
+          </div>
+          <p class="clock_wrap">
+            Seoul
+            <span class="day">0000.00.00</span>
+            <span class="time">00:00:00</span>
+          </p>
+          <h4><span>UIUX Designer</span></h4>
+          <h4><span>Publisher</span></h4>
+          <h4><span>Frontend Developer</span></h4>
+        </div>
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+      </section>
+      <section class="m02" id="about">
+        <div class="inner">
+          <h3 class="sub-tit">ABOUT</h3>
+        </div>
+      </section>
+      <section class="m03" id="work">
+        <div class="inner">
+          <h3 class="sub-tit">WORK</h3>
+          <ul class="tab flx">
+            <li>
+              <input
+                type="radio"
+                id="work1"
+                value="work1"
+                name="work"
+                checked
+              />
+              <label for="work1">재직 프로젝트</label>
+            </li>
+            <li>
+              <input type="radio" id="work2" value="work2" name="work" />
+              <label for="work2">개인 프로젝트</label>
+            </li>
+          </ul>
+          <div class="container">
+            <div class="box on">
+              <ul class="left">
+                <li class="on">
+                  <span>서울국제도서전</span>
+                  <figure><img src="./img/arrow.svg" alt="" /></figure>
+                </li>
+                <li>
+                  <span>소부장 기술융합포럼</span>
+                  <figure><img src="./img/arrow.svg" alt="" /></figure>
+                </li>
+                <li>
+                  <span>한국장애인재단-웹진</span>
+                  <figure><img src="./img/arrow.svg" alt="" /></figure>
+                </li>
+                <li>
+                  <span>원스글로벌</span>
+                  <figure><img src="./img/arrow.svg" alt="" /></figure>
+                </li>
+                <li>
+                  <span>원데이바이오텍임플란트</span>
+                  <figure><img src="./img/arrow.svg" alt="" /></figure>
+                </li>
+                <li>
+                  <span>솔렌시아</span>
+                  <figure><img src="./img/arrow.svg" alt="" /></figure>
+                </li>
+                <li>
+                  <span>구립용산노인전문요양원</span>
+                  <figure><img src="./img/arrow.svg" alt="" /></figure>
+                </li>
+              </ul>
+              <ul class="right">
+                <li class="on">
+                  <div class="top flx">
+                    <h2>서울국제도서전</h2>
+                    <div class="btn flx">
+                      <a href="#null">설명보기</a>
+                      <a href="#null">페이지</a>
+                    </div>
+                    <p><span>작업 기간</span> 2022.10 - 2022.11</p>
+                    <p><span>퍼블리싱 기여도</span> 90%</p>
+                    <p>서울 국제도서전 홈페이지 리뉴얼</p>
+                  </div>
+                  <div class="img"></div>
+                </li>
+                <li>
+                  <div class="top flx">
+                    <h2>소부장 기술융합포럼</h2>
+                    <div class="btn flx">
+                      <a href="#null">설명보기</a>
+                      <a href="#null">페이지</a>
+                    </div>
+                    <p><span>작업 기간</span> 2022.08 - 2022.10</p>
+                    <p><span>퍼블리싱 기여도</span> 100%</p>
+                    <p>내용설명</p>
+                  </div>
+                  <div class="img"></div>
+                </li>
+                <li>
+                  <div class="top flx">
+                    <h2>한국장애인재단 웹진</h2>
+                    <div class="btn flx">
+                      <a href="#null">설명보기</a>
+                      <a href="#null">페이지</a>
+                    </div>
+                    <p><span>작업 기간</span> 2022.0 - 2022.10</p>
+                    <p><span>퍼블리싱 기여도</span> 100%</p>
+                    <p>내용설명</p>
+                  </div>
+                  <div class="img"></div>
+                </li>
+                <li>
+                  <div class="top flx">
+                    <h2>원스글로벌</h2>
+                    <div class="btn flx">
+                      <a href="#null">설명보기</a>
+                      <a href="#null">페이지</a>
+                    </div>
+                    <p><span>작업 기간</span> 2022.06 - 2022.09</p>
+                    <p><span>퍼블리싱 기여도</span> 100%</p>
+                    <p>내용설명</p>
+                  </div>
+                  <div class="img"></div>
+                </li>
+                <li>
+                  <div class="top flx">
+                    <h2>원데이바이오텍임플란트</h2>
+                    <div class="btn flx">
+                      <a href="#null">설명보기</a>
+                      <a href="#null">페이지</a>
+                    </div>
+                    <p><span>작업 기간</span> 2022.05 - 2022.05</p>
+                    <p><span>퍼블리싱 기여도</span> 100%</p>
+                    <p>내용설명</p>
+                  </div>
+                  <div class="img"></div>
+                </li>
+                <li>
+                  <div class="top flx">
+                    <h2>솔렌시아</h2>
+                    <div class="btn flx">
+                      <a href="#null">설명보기</a>
+                      <a href="#null">페이지</a>
+                    </div>
+                    <p>
+                      <span>작업 기간</span> 2022.03 - 2022.03 (퍼블리싱 기간 :
+                      25일)
+                    </p>
+                    <p><span>퍼블리싱 기여도</span> 100%</p>
+                    <p>내용설명</p>
+                  </div>
+                  <div class="img"></div>
+                </li>
+                <li>
+                  <div class="top flx">
+                    <h2>구립용산노인전문요양원</h2>
+                    <div class="btn flx">
+                      <a href="#null">설명보기</a>
+                      <a href="#null">페이지</a>
+                    </div>
+                    <p><span>작업 기간</span> 2022.01 - 2022.04</p>
+                    <p><span>퍼블리싱 기여도</span> 100%</p>
+                    <p>내용설명</p>
+                  </div>
+                  <div class="img"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="box">2</div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="m04">
+        <div class="container">
+          <h3>HTML</h3>
+          <h3>CSS</h3>
+          <h3>SCSS</h3>
+          <h3>JAVASCRIPT</h3>
+          <h3>JQUERY</h3>
+          <h3>REACT</h3>
+          <h3>TYPESCRIPT</h3>
+        </div>
+      </section> -->
+      <section class="m04">
+        <div class="text">
+          <a
+            href="https://likeable-diplodocus-e00.notion.site/9a7c4fc2190f4f76a33ac813e8444f87?v=63d35596410e4df4af4564e982be54b1"
+            tartget="_blank"
+            >View All Project</a
+          >
+        </div>
+        <div class="container flx">
+          <div class="imgs imgs1">
+            <img src="img/m04_img1.jpg" alt="" />
+            <img src="img/m04_img2.jpg" alt="" />
+            <img src="img/m04_img3.jpg" alt="" />
+            <img src="img/m04_img4.jpg" alt="" />
+            <img src="img/m04_img5.jpg" alt="" />
+            <img src="img/m04_img6.jpg" alt="" />
+            <img src="img/m04_img7.jpg" alt="" />
+            <img src="img/m04_img8.jpg" alt="" />
+            <img src="img/m04_img9.jpg" alt="" />
+          </div>
+          <div class="imgs imgs2">
+            <img src="img/m04_img10.jpg" alt="" />
+            <img src="img/m04_img11.jpg" alt="" />
+            <img src="img/m04_img12.jpg" alt="" />
+            <img src="img/m04_img13.jpg" alt="" />
+            <img src="img/m04_img14.jpg" alt="" />
+            <img src="img/m04_img15.jpg" alt="" />
+            <img src="img/m04_img16.jpg" alt="" />
+            <img src="img/m04_img17.jpg" alt="" />
+            <img src="img/m04_img18.jpg" alt="" />
+          </div>
+          <div class="imgs imgs3">
+            <img src="img/m04_img19.jpg" alt="" />
+            <img src="img/m04_img20.jpg" alt="" />
+            <img src="img/m04_img21.jpg" alt="" />
+            <img src="img/m04_img22.jpg" alt="" />
+            <img src="img/m04_img23.jpg" alt="" />
+            <img src="img/m04_img24.jpg" alt="" />
+            <img src="img/m04_img25.jpg" alt="" />
+            <img src="img/m04_img26.jpg" alt="" />
+            <img src="img/m04_img27.jpg" alt="" />
+          </div>
+          <div class="imgs imgs4">
+            <img src="img/m04_img28.jpg" alt="" />
+            <img src="img/m04_img29.jpg" alt="" />
+            <img src="img/m04_img30.jpg" alt="" />
+            <img src="img/m04_img31.jpg" alt="" />
+            <img src="img/m04_img32.jpg" alt="" />
+            <img src="img/m04_img33.jpg" alt="" />
+            <img src="img/m04_img34.jpg" alt="" />
+            <img src="img/m04_img35.jpg" alt="" />
+            <img src="img/m04_img36.jpg" alt="" />
+          </div>
+          <div class="imgs imgs5">
+            <img src="img/m04_img37.jpg" alt="" />
+            <img src="img/m04_img38.jpg" alt="" />
+            <img src="img/m04_img39.jpg" alt="" />
+            <img src="img/m04_img40.jpg" alt="" />
+            <img src="img/m04_img41.jpg" alt="" />
+            <img src="img/m04_img42.jpg" alt="" />
+            <img src="img/m04_img43.jpg" alt="" />
+            <img src="img/m04_img44.jpg" alt="" />
+            <img src="img/m04_img45.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contact">
+      <div class="inner">푸터</div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/clock.js"></script>
+  </body>
+</html>
