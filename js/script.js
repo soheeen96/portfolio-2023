@@ -20,6 +20,27 @@ gsap.registerPlugin(ScrollTrigger);
 $(window).load(function () {
   var tl = gsap.timeline({
     scrollTrigger: {
+      trigger: ".loading",
+      start: "top 50%",
+      end: "bottom 20%",
+      toggleActions: "play none none none",
+    },
+  });
+  tl.to(".loading", {
+    height: 0,
+    opacity: 0,
+    duration: 0.5,
+    delay: 2,
+    stagger: 0.3,
+  }).to(".wrap", {
+    height: "auto",
+    opacity: 1,
+    duration: 0.7,
+    stagger: 0.3,
+  });
+
+  var tl = gsap.timeline({
+    scrollTrigger: {
       trigger: ".m01",
       start: "top 50%",
       end: "bottom 20%",
@@ -79,7 +100,7 @@ $(window).load(function () {
         //markers: true,
       },
       top: -400,
-      //opacity: 0.2,
+      opacity: 0.2,
     });
   });
 
@@ -93,7 +114,7 @@ $(window).load(function () {
         scrub: 3,
       },
       top: -300,
-      //opacity: 0.2,
+      opacity: 0.2,
     });
   });
 
@@ -107,7 +128,7 @@ $(window).load(function () {
         scrub: 3,
       },
       top: -500,
-      //opacity: 0.2,
+      opacity: 0.2,
     });
   });
 
@@ -121,7 +142,7 @@ $(window).load(function () {
         scrub: 3,
       },
       top: -400,
-      //opacity: 0.2,
+      opacity: 0.2,
     });
   });
 
@@ -135,7 +156,7 @@ $(window).load(function () {
         scrub: 3,
       },
       top: -400,
-      //opacity: 0.2,
+      opacity: 0.2,
     });
   });
 });

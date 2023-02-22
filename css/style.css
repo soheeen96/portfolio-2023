@@ -10,6 +10,7 @@ body {
   color: #282828;
   background: #f1f1f1;
   position: relative;
+  word-break: keep-all;
 }
 a {
   color: #282828;
@@ -23,6 +24,10 @@ a {
 .flx {
   display: flex;
   flex-flow: row wrap;
+}
+
+.color_y {
+  color: #f0a500;
 }
 
 /* 헤더*/
@@ -51,13 +56,39 @@ header .inner {
 header .logo {
   font-size: 22px;
   font-weight: 600;
+  transition: all 0.3s;
 }
+header .logo:hover {
+  color: #f0a500;
+}
+
 nav li:not(:last-child) {
   margin-right: 60px;
 }
 nav li a {
   font-size: 18px;
   font-weight: 600;
+  position: relative;
+  transition: all 0.3s;
+}
+nav li a::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  background: #f0a500;
+}
+nav li a:hover {
+  color: #f0a500;
+}
+nav li a:hover::before {
+  width: 5px;
+  height: 5px;
 }
 
 /* 메인 공통 */
@@ -65,8 +96,9 @@ section {
   padding: 80px 0;
 }
 .sub-tit {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 600;
+  margin-bottom: 40px;
 }
 
 /* 메인 section01 */
@@ -122,12 +154,80 @@ section {
 
 /* 메인 section2 */
 .m02 {
-  height: 100vh;
   background: #282828;
   color: #fff;
   width: 94%;
   border-radius: 30px;
   margin: 0 auto;
+}
+.m02 .left {
+  width: 40%;
+}
+.m02 .right {
+  width: 60%;
+  padding-left: 5%;
+}
+.m02 .bottom {
+  padding-top: 80px;
+}
+
+.m02 .top h2 {
+  font-size: min(110px, 10vw);
+  font-weight: 500;
+}
+
+.m02 .container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.m02 p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.m02 .dot:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.m02 .left > ul > li {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.m02 .left > ul > li:last-child {
+  margin-bottom: 0;
+}
+.m02 .left ul ul li {
+  font-size: 17px;
+  padding-left: 15px;
+  margin: 10px 0;
+  position: relative;
+}
+.m02 .left ul li span {
+  opacity: 0.75;
+}
+.m02 .right > ul > li {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+.m02 .right span {
+  width: 140px;
+  font-size: 20px;
+}
+.m02 .right ul ul {
+  width: calc(100% - 140px);
+  font-size: 17px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 /*메인 section3*/
@@ -159,8 +259,12 @@ section {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.35;
   transition: all 0.2s;
+}
+
+.m03 .left li:hover {
+  opacity: 1;
 }
 
 .m03 .left li.on {
@@ -217,7 +321,7 @@ section {
 .m03 .right .img {
   position: relative;
   width: 100%;
-  padding-bottom: 60%;
+  padding-bottom: 55%;
   background-image: url(../img/m03_img1.jpg);
   background-position-x: center;
   background-position-y: top;
@@ -242,13 +346,9 @@ section {
   animation-duration: 20s;
 }
 .m03 .right li:nth-of-type(5) .img {
-  background-image: url(../img/m03_img5.jpg);
-  animation-duration: 15s;
-}
-.m03 .right li:nth-of-type(6) .img {
   background-image: url(../img/m03_img6.jpg);
 }
-.m03 .right li:nth-of-type(7) .img {
+.m03 .right li:nth-of-type(6) .img {
   background-image: url(../img/m03_img7.jpg);
   animation-duration: 8s;
 }
@@ -263,12 +363,6 @@ section {
   border: 10px solid #282828;
   border-radius: 10px;
 }
-/* .m03 .right li:nth-of-type(4).on .img {
-  animation: img-scrollup 15s linear;
-}
-.m03 .right .on .img {
-  animation: img-scrollup 12s linear;
-} */
 
 .m03 .right .on .img:hover {
   animation-play-state: paused;
@@ -280,6 +374,37 @@ section {
   100% {
     background-position-y: bottom;
   }
+}
+.m03 .tab {
+}
+.m03 .tab input[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border-radius: 0;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #282828;
+  margin: 0 5px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.m03 .tab input[type="radio"]:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #282828;
+  transition: all 0.3s;
+}
+.m03 .tab input[type="radio"]:checked::before {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+}
+.m03 .tab label {
+  cursor: pointer;
 }
 
 .m03 .btn a {
@@ -294,46 +419,24 @@ section {
   color: #282828;
   margin-left: 20px;
 }
-
-.m03 .right p {
+.m03 .right .txt {
+  padding-top: 15px;
   width: 100%;
+}
+.m03 .right .txt h4 {
+  font-size: 17px;
+  line-height: 1.6;
+}
+.m03 .right .txt p {
   font-size: 18px;
   line-height: 1.4;
-  padding-bottom: 10px;
+  margin-top: 10px;
 }
-.m03 .right .bottom p span {
+.m03 .right .txt h4 span {
   display: inline-block;
   width: min(25%, 150px);
-  font-weight: 700;
+  font-weight: 500;
 }
-/* 
-.m04 {
-  height: auto;
-  padding: 0;
-  overflow: hidden;
-  background: #282828;
-}
-.m04 .container {
-  display: flex;
-  animation: textLoop 20s linear infinite;
-}
-.m04 h3 {
-  font-size: 80px;
-  font-weight: 700;
-  margin: 0 40px;
-  color: #fff;
-}
-
-@keyframes textLoop {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-} */
 
 .m04 {
   background: #141414;
@@ -357,17 +460,36 @@ section {
   font-size: 68px;
   color: #fff;
   font-weight: 700;
+  transition: all 0.5s;
+  position: relative;
+}
+.m04 .text a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.5s;
+  background: #f0a500;
+}
+.m04 .text a:hover {
+  color: #f0a500;
+}
+.m04 .text a:hover::before {
+  width: 100%;
 }
 
 .m04 .container {
   align-items: flex-start;
   justify-content: center;
   width: 130%;
-  transform: rotate(-17deg) translateY(-10%);
+  transform: rotate(-17deg) translateY(-15%);
 }
 
 .m04 .imgs {
-  width: calc(92% / 5);
+  width: 18%;
+  margin-right: min(10px, 1%);
 }
 .m04 .imgs img {
   margin-bottom: 20px;
@@ -380,4 +502,31 @@ section {
 #contact {
   background: #141414;
   padding: 80px 0;
+  color: #f1f1f1;
+}
+#contact h3 {
+  width: 20%;
+}
+#contact ul {
+  width: 40%;
+}
+#contact ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#contact ul li span {
+  width: 80px;
+}
+#contact ul li a {
+  color: #f1f1f1;
+  transition: all 0.2s;
+}
+#contact ul:last-child {
+  justify-content: flex-end;
+}
+#contact ul:last-child li {
+  margin-left: 20px;
+}
+#contact ul:last-child li a:hover {
+  color: #f0a500;
 }
