@@ -1,17 +1,34 @@
 $(document).ready(function () {
   $(".m03 .tab li").click(function () {
-    const idx = $(this).index();
+    let idx = $(this).index();
     $(".m03 .container .box").removeClass("on");
     $(".m03 .container .box").eq(idx).addClass("on");
   });
 
-  $(".m03 .left li").click(function () {
-    $(".m03 .left li").removeClass("on");
+  $(".m03 .box1 .left li").click(function () {
+    $(".m03 .box1 .left li").removeClass("on");
     $(this).addClass("on");
 
-    const idx = $(this).index();
-    $(".m03 .right li").removeClass("on");
-    $(".m03 .right li").eq(idx).addClass("on");
+    const idx1 = $(this).index();
+    $(".m03 .box1 .right li").removeClass("on");
+    $(".m03 .box1 .right li").eq(idx1).addClass("on");
+  });
+
+  $(".m03_overlay").hide();
+  $(".m03 .box2 .left li").click(function () {
+    $(".m03 .box2 .left li").removeClass("on");
+    $(this).addClass("on");
+
+    const idx2 = $(this).index();
+    $(".m03 .box2 .right li").removeClass("on");
+    $(".m03 .box2 .right li").eq(idx2).addClass("on");
+  });
+
+  $(".m03_overlay").click(function () {
+    $(".m03 .box1 .left li").eq(0).removeClass("on");
+    $(".m03 .box2 .left li").eq(0).removeClass("on");
+    $(".m03 .box1 .right li").eq(0).removeClass("on");
+    $(".m03 .box2 .right li").eq(0).removeClass("on");
   });
 });
 

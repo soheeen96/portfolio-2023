@@ -62,6 +62,10 @@ header .logo:hover {
   color: #f0a500;
 }
 
+header .mo_nav {
+  display: none;
+}
+
 nav li:not(:last-child) {
   margin-right: 60px;
 }
@@ -102,10 +106,6 @@ section {
 }
 
 /* 메인 section01 */
-
-.m01 {
-}
-
 .m01 .inner {
   padding: 80px 0 40px;
 }
@@ -172,7 +172,7 @@ section {
 }
 
 .m02 .top h2 {
-  font-size: min(110px, 10vw);
+  font-size: min(110px, 8vw);
   font-weight: 500;
 }
 
@@ -242,13 +242,6 @@ section {
 .m03 .container .box > ul {
   width: 50%;
 }
-.m03 .tab {
-  justify-content: flex-end;
-  margin-bottom: 45px;
-}
-.m03 .tab li {
-  margin-left: 30px;
-}
 .m03 .left li {
   font-size: 24px;
   font-weight: 600;
@@ -297,7 +290,7 @@ section {
   height: 25px;
 }
 .m03 .right {
-  padding-left: 80px;
+  padding-left: min(80px, 5%);
   overflow: hidden;
 }
 
@@ -321,7 +314,8 @@ section {
 .m03 .right .img {
   position: relative;
   width: 100%;
-  padding-bottom: 55%;
+  /* padding-bottom: 55%; */
+  height: min(420px, 28vw);
   background-image: url(../img/m03_img1.jpg);
   background-position-x: center;
   background-position-y: top;
@@ -376,6 +370,11 @@ section {
   }
 }
 .m03 .tab {
+  justify-content: flex-end;
+  margin-bottom: 45px;
+}
+.m03 .tab li {
+  margin-left: 30px;
 }
 .m03 .tab input[type="radio"] {
   vertical-align: middle;
@@ -413,12 +412,19 @@ section {
   border: 1px solid #282828;
   background: #282828;
   color: #fff;
+  transition: all 0.3s;
 }
 .m03 .btn a:last-child {
   background: none;
   color: #282828;
   margin-left: 20px;
 }
+.m03 .btn a:hover {
+  border: 1px solid #f0a500;
+  background-color: #f0a500;
+  color: #fff;
+}
+
 .m03 .right .txt {
   padding-top: 15px;
   width: 100%;
@@ -453,6 +459,8 @@ section {
   z-index: 4;
   top: 50%;
   left: 50%;
+  width: 100%;
+  text-align: center;
   transform: translate(-50%, -50%);
 }
 
@@ -529,4 +537,474 @@ section {
 }
 #contact ul:last-child li a:hover {
   color: #f0a500;
+}
+
+@media (max-width: 1700px) {
+  .m02 .right {
+    padding-left: 3%;
+  }
+  .m03 .right {
+    padding-left: 3%;
+  }
+}
+
+@media (max-width: 1400px) {
+  nav li:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+  .sub-tit {
+    font-size: 27px;
+    margin-bottom: 35px;
+  }
+
+  .m01 p {
+    margin-bottom: 30px;
+  }
+  .m01 h2 {
+    font-size: min(280px, 15vw);
+    letter-spacing: -10px;
+    margin-left: -15px;
+  }
+  .m01 h4 {
+    font-size: 22px;
+  }
+
+  .m02 .bottom {
+    padding-top: 70px;
+  }
+  .m02 .container h3 {
+    margin-bottom: 15px;
+  }
+  .m02 .left > ul > li {
+    margin-bottom: 15px;
+  }
+
+  .m03 .tab {
+    margin-bottom: 40px;
+  }
+  .m03 .left li {
+    padding: 36px 20px;
+  }
+  .m04 .text a {
+    font-size: 64px;
+  }
+
+  #contact {
+    padding: 70px 0;
+  }
+  #contact ul li {
+    font-size: 17px;
+  }
+  #contact ul:last-child li {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  nav li a {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+  .sub-tit {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .m01 h2 {
+    letter-spacing: -5px;
+    margin-left: -10px;
+  }
+  .m01 h4 {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .m02 .bottom {
+    padding-top: 60px;
+  }
+  .m02 .container h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .m02 p {
+    font-size: 17px;
+  }
+  .m02 .left > ul > li {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .m02 .left ul ul li {
+    font-size: 16px;
+    padding-left: 15px;
+    margin: 8px 0;
+  }
+  .m02 .right > ul > li {
+    margin-bottom: 10px;
+  }
+  .m02 .right span {
+    width: 130px;
+    font-size: 18px;
+  }
+  .m02 .right ul ul {
+    width: calc(100% - 130px);
+    font-size: 16px;
+  }
+
+  .m03 .tab {
+    margin-bottom: 30px;
+  }
+  .m03 .tab li {
+    margin-left: 20px;
+  }
+  .m03 .left li {
+    font-size: 22px;
+    padding: 33px 20px;
+  }
+  .m03 .right h2 {
+    font-size: 26px;
+  }
+  .m03 .btn a {
+    padding: 8px 25px;
+  }
+  .m03 .right .txt {
+    padding-top: 15px;
+    width: 100%;
+  }
+  .m03 .right .txt h4 {
+    font-size: 16px;
+  }
+  .m03 .right .txt p {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+
+  .m04 {
+    height: 65vw;
+  }
+  .m04 .text a {
+    font-size: min(60px, 8vw);
+  }
+
+  #contact {
+    padding: 60px 0;
+  }
+  #contact ul li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1080px) {
+  nav li:not(:last-child) {
+    margin-right: 40px;
+  }
+  nav li a {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+  .sub-tit {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .m01 p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .m01 h2 {
+    font-size: max(56px, 15vw);
+    margin-left: 0;
+  }
+  .m01 h4 {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .m02 .container h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .m02 p {
+    font-size: 16px;
+  }
+  .m02 .bottom {
+    padding-top: 50px;
+  }
+  .m02 .bottom > div {
+    width: 100%;
+  }
+  .m02 .left > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+  }
+  .m02 .left > ul > li:nth-of-type(1) {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .m02 .left > ul > li:nth-of-type(2) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .m02 .left > ul > li:nth-of-type(3) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .m02 .left > ul > li {
+    margin-bottom: 0;
+  }
+  .m02 .left ul ul li {
+    font-size: 15px;
+    padding-left: 10px;
+    margin: 5px 0;
+  }
+  .m02 .bottom .right {
+    padding: 4% 0 0 0;
+  }
+  .m02 .right span {
+    width: 120px;
+    font-size: 17px;
+  }
+  .m02 .right ul ul {
+    width: calc(100% - 120px);
+    font-size: 15px;
+  }
+
+  .m03 .tab {
+    margin-bottom: 25px;
+  }
+  .m03 .tab li {
+    margin-left: 15px;
+  }
+  .m03 .tab label {
+    font-size: 15px;
+  }
+  .m03 .container .box .left {
+    width: 35%;
+  }
+  .m03 .left li {
+    font-size: 20px;
+    padding: 28px 10px;
+  }
+  .m03 .left li figure {
+    right: 10px;
+  }
+  .m03 .container .box .right {
+    width: 65%;
+  }
+  .m03 .right h2 {
+    font-size: 24px;
+  }
+
+  .m03 .right .txt h4 {
+    font-size: 15px;
+  }
+  .m03 .right .txt p {
+    font-size: 16px;
+  }
+  .m03 .right .img {
+    height: min(270px, 35vw);
+  }
+  .m03 .btn a {
+    padding: 8px 20px;
+    font-size: 15px;
+  }
+  .m03 .btn a:last-child {
+    margin-left: 15px;
+  }
+
+  #contact {
+    padding: 50px 0;
+  }
+  #contact h3 {
+    width: 100%;
+  }
+  #contact ul {
+    width: 50%;
+  }
+  #contact ul li {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  #contact ul li span {
+    width: 70px;
+  }
+  #contact ul:last-child li {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .inner {
+    height: 60px;
+  }
+  header.scroll-down {
+    top: -61px;
+  }
+  header .logo {
+    font-size: 20px;
+  }
+  header nav {
+    display: none;
+  }
+  header .mo_nav {
+    display: block;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+  .sub-tit {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .m01 p {
+    font-size: 12px;
+  }
+  .m01 h4 {
+    font-size: 16px;
+    margin-top: 3px;
+  }
+
+  .m02 .container h3 {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .m02 p {
+    font-size: 15px;
+  }
+  .m02 .top > div {
+    width: 100%;
+  }
+  .m02 .top p br {
+    display: none;
+  }
+  .m02 .top .right {
+    padding: 4% 0 0 0;
+  }
+  .m02 .bottom {
+    padding-top: 40px;
+  }
+  .m02 .left > ul {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0;
+  }
+  .m02 .left > ul > li:nth-of-type(1) {
+    grid-area: 1;
+  }
+  .m02 .left > ul > li:nth-of-type(2) {
+    grid-area: 2;
+  }
+  .m02 .left > ul > li:nth-of-type(3) {
+    grid-area: 3;
+  }
+  .m02 .left ul ul li {
+    font-size: 14px;
+  }
+  .m02 .right span {
+    width: 115px;
+    font-size: 16px;
+  }
+  .m02 .right ul ul {
+    width: calc(100% - 115px);
+    font-size: 14px;
+  }
+
+  .m03 .tab {
+    margin-bottom: 20px;
+  }
+  .m03 .container .box .left {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .m03 .left li {
+    font-size: 16px;
+    padding: 15px 0;
+    width: calc(100% / 3);
+    justify-content: center;
+  }
+  .m03 .left li figure {
+    display: none;
+  }
+  .m03 .container .box .right {
+    width: 100%;
+    padding: 4% 0 0 0;
+  }
+  .m03 .right h2 {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .m03 .right .txt h4 {
+    font-size: 14px;
+  }
+  .m03 .right .txt p {
+    font-size: 15px;
+  }
+  .m03 .right .txt p br {
+    display: none;
+  }
+  .m03 .right .img {
+    height: min(270px, 50vw);
+  }
+  .m03 .btn a {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+  .m03 .btn a:last-child {
+    margin-left: 10px;
+  }
+
+  .m04 .container {
+    opacity: 0.7;
+  }
+
+  #contact {
+    padding: 40px 0;
+  }
+  #contact ul {
+    width: 75%;
+  }
+  #contact ul:last-child {
+    width: 25%;
+  }
+  #contact ul li {
+    font-size: 14px;
+  }
+  #contact ul li span {
+    width: 65px;
+  }
+  #contact ul:last-child li {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .m03 .left li {
+    font-size: 15px;
+    padding: 10px 0;
+    width: 50%;
+    justify-content: center;
+  }
+  .m03 .right h2 {
+    text-align: center;
+  }
+  .m03 .btn {
+    margin: 0 auto;
+  }
+  .m03 .right .txt h4 span {
+    width: 95px;
+  }
 }
