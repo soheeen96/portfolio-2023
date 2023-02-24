@@ -64,6 +64,69 @@ header .logo:hover {
 
 header .mo_nav {
   display: none;
+  position: relative;
+  z-index: 51;
+  width: 26px;
+  height: 20px;
+}
+header .mo_nav span {
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background: #282828;
+  transition: all 0.3s;
+}
+header .mo_nav_on span {
+  left: 0;
+  background: #f1f1f1;
+}
+header .mo_nav span:nth-of-type(1) {
+  top: 0;
+}
+header .mo_nav span:nth-of-type(2) {
+  top: 9px;
+}
+header .mo_nav span:nth-of-type(3) {
+  bottom: 0;
+}
+header .mo_nav_on span:nth-of-type(1) {
+  top: 50%;
+  transform: rotate(-45deg) translateY(-50%);
+}
+header .mo_nav_on span:nth-of-type(2) {
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+}
+header .mo_nav_on span:nth-of-type(3) {
+  display: none;
+}
+
+header .mo_menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  z-index: 50;
+  background: #282828;
+  transition: all 0.3s;
+  color: #f1f1f1;
+}
+header .mo_menu_on {
+  right: 0;
+}
+header .mo_menu ul {
+  padding: 10% 0 0 4%;
+  flex-flow: column wrap;
+}
+header .mo_menu ul li {
+  margin-bottom: 4%;
+}
+header .mo_menu a {
+  font-size: min(32px, 7.5vw);
+  font-weight: 500;
+  color: #f1f1f1;
 }
 
 nav li:not(:last-child) {
