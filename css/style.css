@@ -68,6 +68,7 @@ header .mo_nav {
   z-index: 51;
   width: 26px;
   height: 20px;
+  cursor: pointer;
 }
 header .mo_nav span {
   display: block;
