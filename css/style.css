@@ -385,6 +385,7 @@ section {
   width: 100%;
   /* padding-bottom: 55%; */
   height: min(420px, 28vw);
+  min-height: 280px;
   background-image: url(../img/m03_img1.jpg);
   background-position-x: center;
   background-position-y: top;
